@@ -42,7 +42,7 @@ namespace CommandService.Controllers
       }
       var command = _commandRepo.GetCommand(platformId, commandId);
 
-      if (command != null)
+      if (command == null)
       {
         return NotFound();
       }
